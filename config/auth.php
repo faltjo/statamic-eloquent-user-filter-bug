@@ -60,14 +60,14 @@ return [
     */
 
     'providers' => [
-//        'users' => [
-//            'driver' => 'statamic',
-//        ],
+        //        'users' => [
+        //            'driver' => 'statamic',
+        //        ],
 
-         'users' => [
-             'driver' => 'eloquent',
-             'model' => App\Models\CustomUser::class,
-         ],
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\CustomUser::class,
+        ],
 
         // 'users' => [
         //     'driver' => 'database',

@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class StatamicAuthTables extends Migration
 {
@@ -50,16 +50,16 @@ class StatamicAuthTables extends Migration
     /**
      * Reverse the migrations.
      */
-     public function down()
-     {
-         Schema::table('custom_users', function (Blueprint $table) {
-             $table->dropColumn(['super', 'avatar', 'preferences', 'last_login']);
-             $table->string('password')->nullable(false)->change();
-         });
+    public function down()
+    {
+        Schema::table('custom_users', function (Blueprint $table) {
+            $table->dropColumn(['super', 'avatar', 'preferences', 'last_login']);
+            $table->string('password')->nullable(false)->change();
+        });
 
-         Schema::dropIfExists('role_custom_user');
-         Schema::dropIfExists('group_custom_user');
+        Schema::dropIfExists('role_custom_user');
+        Schema::dropIfExists('group_custom_user');
 
-         Schema::dropIfExists('password_activation_tokens');
-     }
+        Schema::dropIfExists('password_activation_tokens');
+    }
 }
