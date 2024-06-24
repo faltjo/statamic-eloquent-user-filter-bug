@@ -1,0 +1,4 @@
+role_to_filter_for:
+  title: role_to_filter_for
+  permissions:
+    - 'access cp'

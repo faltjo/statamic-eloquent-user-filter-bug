@@ -1,0 +1,4 @@
+group_to_filter_for:
+  title: group_to_filter_for
+  roles:
+    - role_to_filter_for
